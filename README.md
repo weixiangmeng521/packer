@@ -21,7 +21,7 @@ $path = __DIR__ . DIRECTORY_SEPARATOR . "web" . DIRECTORY_SEPARATOR."index.html"
 $liveServer = new LiveServer($path);
 ```
 
-- 修改packer中的`$input`变量，指定打包文件路径
+- 修改packer中的`$input`变量，需要打包的文件路径
 ```php
 $input = __DIR__ . DIRECTORY_SEPARATOR . "web" . DIRECTORY_SEPARATOR . "index.html";
 $w = new Writer($input);
