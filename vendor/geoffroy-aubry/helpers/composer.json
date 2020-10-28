@@ -1,0 +1,27 @@
+{
+    "name":         "geoffroy-aubry/helpers",
+    "description":  "Some helpers used in several personal packages and a Debug class useful for don't forgetting where debug traces are.",
+    "keywords":     ["helpers", "tools", "debug"],
+    "type":         "library",
+    "license":      "LGPL-3.0+",
+    "authors":      [
+        {
+            "name":     "Geoffroy Aubry",
+            "email":    "geoffroy.aubry@free.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "skleeschulte/base32": "^0.0.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit":           ">=3.7",
+        "phpmd/phpmd":               "2.0.*",
+        "squizlabs/php_codesniffer": "1.4.*",
+        "satooshi/php-coveralls":    "dev-master",
+        "apigen/apigen":             "2.8.0"
+    },
+    "autoload": {
+        "psr-0": {"GAubry\\Helpers": "src/"}
+    }
+}

@@ -1,0 +1,25 @@
+# See: http://about.travis-ci.org/docs/user/build-configuration/
+# See: https://github.com/satooshi/php-coveralls
+
+language: php
+php:
+  - 5.6
+
+before_script:
+  - phpenv config-rm xdebug.ini
+  - cp phpunit-dist.xml phpunit.xml
+  - composer self-update
+  - composer install --dev --no-interaction
+
+script:
+  - mkdir -p build/logs
+  - php vendor/bin/phpunit --configuration phpunit.xml
+  - php vendor/bin/phpcs --standard=PSR2 src/ tests/ -v
+  - php vendor/bin/phpmd src/ text codesize,design,unusedcode,naming,controversial
+
+after_script:
+  - php vendor/bin/coveralls -v
+
+notifications:
+  on_success: always
+  on_failure: always

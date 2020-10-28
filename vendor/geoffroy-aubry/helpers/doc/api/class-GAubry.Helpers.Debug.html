@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class GAubry\Helpers\Debug | Helpers</title>
+
+	<script type="text/javascript" src="resources/combined.js?7177839"></script>
+	<script type="text/javascript" src="elementlist.js?2378676327"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-GAubry.html">GAubry<span></span></a>
+						<ul>
+				<li class="active main"><a href="namespace-GAubry.Helpers.html">Helpers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-GAubry.Helpers.Debug.html">Debug</a></li>
+				<li><a href="class-GAubry.Helpers.Helpers.html">Helpers</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-GAubry.Helpers.html" title="Summary of GAubry\Helpers"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Debug</h1>
+
+
+	<div class="description">
+	
+<p>Debug class useful for don't forgetting where debug traces are.</p>
+
+<p>Automatically decorates print_r() and var_dump() with following information:
+– file and line of the caller – name of function/method containing the call
+– name of the parameter passed during call</p>
+
+<p>Example:</p>
+
+<pre>
+<span class="php-keyword1">function</span> f(<span
+class="php-var">$value</span>) {Debug::printr(<span
+class="php-var">$value</span>);}
+</pre>
+
+<p>Result:</p>
+
+<pre>
+[<span class="php-keyword1">function</span> f() in <span
+class="php-keyword2">file</span> /path/to/<span
+class="php-keyword2">file</span>.php, line <span
+class="php-num">31</span>]
+<span class="php-var">$value</span> =
+<span
+class="php-keyword1">Array</span>
+(
+    [<span
+class="php-num">0</span>] =&gt; <span class="php-quote">'xyz'</span>
+)
+</pre>
+
+<p>See examples/debug.php for a complete example.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-GAubry.html">GAubry</a>\<a href="namespace-GAubry.Helpers.html">Helpers</a><br />
+		
+
+		<b>Located at</b> <a href="source-class-GAubry.Helpers.Debug.html#5-222" title="Go to source code">GAubry/Helpers/Debug.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 private 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-GAubry.Helpers.Debug.html#51-58" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+
+
+
+				<h4>CodeCoverageIgnore</h4>
+				<div class="list">
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCaller" id="_getCaller">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCaller">#</a>
+		<code><a href="source-class-GAubry.Helpers.Debug.html#60-108" title="Go to source code">getCaller</a>( <span>string <var>$sFunctionName</var> = <span class="php-quote">''</span></span>, <span>array <var>$aStack</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an array containing function name, filename and line in filename of
+the caller. If called out of any function, then return '' as function name. To
+return the caller of your function, either call get_caller(), or
+get_caller(__FUNCTION__).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array containing function name, filename and line in filename of
+the caller. If called out of any function, then return '' as function name. To
+return the caller of your function, either call get_caller(), or
+get_caller(__FUNCTION__).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sFunctionName</var></dt>
+					<dd><code>string</code><br>$sFunctionName function whose caller is searched</dd>
+					<dt><var>$aStack</var></dt>
+					<dd><code>array</code><br>stack trace, or debug_backtrace() by default</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>triplet: (string)function name or '', (string)filename or '', (int)line in
+filename or 0<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Aram Kocharyan<br />
+						Geoffroy Aubry<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="http://stackoverflow.com/a/4767754">http://stackoverflow.com/a/4767754</a><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getVarName" id="_getVarName">
+
+		<td class="attributes"><code>
+			 private static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getVarName">#</a>
+		<code><a href="source-class-GAubry.Helpers.Debug.html#110-156" title="Go to source code">getVarName</a>( <span>string <var>$sFunction</var></span>, <span>string <var>$sFile</var></span>, <span>integer <var>$iLine</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the name of the first parameter of the penultimate function call.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the name of the first parameter of the penultimate function call.</p>
+
+<p>TODO bug if multiple calls in the same line…</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sFunction</var></dt>
+					<dd><code>string</code><br>$sFunction function called</dd>
+					<dt><var>$sFile</var></dt>
+					<dd><code>string</code><br>$sFile file containing a call to $sFunction</dd>
+					<dt><var>$iLine</var></dt>
+					<dd><code>integer</code><br>$iLine line in $sFile containing a call to $sFunction</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the name of the first parameter of the penultimate function call.<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Sebastián Grignoli<br />
+						Geoffroy Aubry<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="http://stackoverflow.com/a/6837836">http://stackoverflow.com/a/6837836</a><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="displayTrace" id="_displayTrace">
+
+		<td class="attributes"><code>
+			 private static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_displayTrace">#</a>
+		<code><a href="source-class-GAubry.Helpers.Debug.html#158-173" title="Go to source code">displayTrace</a>( <span>string <var>$sPattern</var></span>, <span>string <var>$sValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Use specified pattern to display function name, filename, line in filename,
+varname in parameter and value of this parameter of the caller.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use specified pattern to display function name, filename, line in filename,
+varname in parameter and value of this parameter of the caller.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sPattern</var></dt>
+					<dd><code>string</code><br>$sPattern key of self::$sDisplayPatterns</dd>
+					<dt><var>$sValue</var></dt>
+					<dd><code>string</code><br>$sValue value of the parameter of the caller</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-GAubry.Helpers.Debug.html#$sDisplayPatterns">GAubry\Helpers\Debug::<var>$sDisplayPatterns</var></a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="htmlVarDump" id="_htmlVarDump">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_htmlVarDump">#</a>
+		<code><a href="source-class-GAubry.Helpers.Debug.html#175-187" title="Go to source code">htmlVarDump</a>( <span>mixed <var>$mValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Display an HTML trace containing a var_dump() of the specified value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Display an HTML trace containing a var_dump() of the specified value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mValue</var></dt>
+					<dd><code>mixed</code><br>$mValue value to pass to var_dump()</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="htmlPrintr" id="_htmlPrintr">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_htmlPrintr">#</a>
+		<code><a href="source-class-GAubry.Helpers.Debug.html#189-197" title="Go to source code">htmlPrintr</a>( <span>mixed <var>$mValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Display an HTML trace containing a print_r() of the specified value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Display an HTML trace containing a print_r() of the specified value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mValue</var></dt>
+					<dd><code>mixed</code><br>$mValue value to pass to print_r()</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="varDump" id="_varDump">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_varDump">#</a>
+		<code><a href="source-class-GAubry.Helpers.Debug.html#199-211" title="Go to source code">varDump</a>( <span>mixed <var>$mValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Display a CLI trace containing a var_dump() of the specified value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Display a CLI trace containing a var_dump() of the specified value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mValue</var></dt>
+					<dd><code>mixed</code><br>$mValue value to pass to var_dump()</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="printr" id="_printr">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_printr">#</a>
+		<code><a href="source-class-GAubry.Helpers.Debug.html#213-221" title="Go to source code">printr</a>( <span>mixed <var>$mValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Display a CLI trace containing a print_r() of the specified value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Display a CLI trace containing a print_r() of the specified value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mValue</var></dt>
+					<dd><code>mixed</code><br>$mValue value to pass to print_r()</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="sDisplayPatterns" id="$sDisplayPatterns">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-GAubry.Helpers.Debug.html#33-49" title="Go to source code"><var>$sDisplayPatterns</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+    <span class="php-quote">'html'</span> =&gt; <span class="php-quote">'&lt;pre&gt;&lt;i&gt;[function %1$s in file %2$s, line %3$d]&lt;/i&gt;&lt;br /&gt;&lt;b&gt;%4$s&lt;/b&gt; = %5$s&lt;/pre&gt;'</span>,
+    <span class="php-comment">// @codingStandardsIgnoreStart HEREDOC syntax is not supported in array by pdepend…</span>
+    <span class="php-quote">'cli'</span>  =&gt; <span class="php-quote">&quot;\033[2;33;40m[function \033[1m%1\</span><span class="php-var">$s</span><span class="php-quote">\033[2m in file \033[1m%2\</span><span class="php-var">$s</span><span class="php-quote">\033[2m, line \033[1m%3\</span><span class="php-var">$d</span><span class="php-quote">\033[2m]\n\033[1m%4\</span><span class="php-var">$s</span><span class="php-quote">\033[2m = \033[0m\n%5\</span><span class="php-var">$s</span><span class="php-quote">\n&quot;</span>
+    <span class="php-comment">// @codingStandardsIgnoreEnd</span>
+)</code></td>
+		<td class="description"><div>
+			<a href="#$sDisplayPatterns" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Patterns for both HTML and CLI rendering:<br />
+%1$s = function name or '∅' if no function<br />
+%2$s = filename,<br />
+%3$d = line in filename,<br />
+%4$s = varname in parameter,<br />
+%5$s = value of parameter</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Patterns for both HTML and CLI rendering: %1$s = function name or '∅' if no
+function %2$s = filename, %3$d = line in filename, %4$s = varname in parameter,
+%5$s = value of parameter</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-GAubry.Helpers.Debug.html#_displayTrace">GAubry\Helpers\Debug::displayTrace()</a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Helpers API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
