@@ -6,7 +6,6 @@ require __DIR__ . '/vendor/autoload.php';
 use packer\engine\Writer;
 
 
-
 if($argc === 1){
     echo "\nPacker打包工具\n";
     echo "Usage: php packer [option]\n\n";
@@ -17,6 +16,7 @@ if($argc === 1){
 if($argv[1] === "dev"){
     system("php index.php start");
 }
+
 if($argv[1] === "build"){
     $input = __DIR__ . DIRECTORY_SEPARATOR . "web" . DIRECTORY_SEPARATOR . "index.html";
     $w = new Writer($input);

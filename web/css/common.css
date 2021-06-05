@@ -1,5 +1,11 @@
 *{padding:0px;margin:0px;}
 :root{
-    --bg-color: #ccc;
+    --bg-color: #221122;
+    
+}
+body{
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','SFNSText','PingFang SC','STHeiti','Helvetica Neue',Helvetica,'Microsoft yahei','微软雅黑',Arial,sans-serif,'SF Pro Icons';
+    background-color: var(--bg-color);
+
     
 }

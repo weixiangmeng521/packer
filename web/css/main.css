@@ -1,2 +1,21 @@
-.container{width:100%;position:relative;}
+.container{max-width:400px;position:relative;margin:15px auto;border-radius:30px;background-color:#fff;padding:15px;box-sizing:content-box;display:block;}
+.container .head{text-align:left;}
+.container .head img{width:100%;}
+.container .head h1{font-size:36px;font-weight:normal;}
+.container .head p{margin:5px 0px 20px;color: #464846;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

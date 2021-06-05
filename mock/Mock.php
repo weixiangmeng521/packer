@@ -6,8 +6,7 @@
  */
 return [
     "index.html" => [
-        "amount"      => "50元",
-        "pay_account" => "10元",
+        "name"      => "Kenny",
     ],
 
 
